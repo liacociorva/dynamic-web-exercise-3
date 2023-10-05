@@ -1,9 +1,11 @@
 import WeatherCard from "@/app/components/WeatherCard";
 import "../app/globals.css";
+import Header from '../app/components/Header';
 
-export async function getStaticProps(){
+export async function getStaticProps({params}){
+    const city = (params && params.city) || 'Boston'
     const res = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=Tokyo&appid=${process.env.WEATHER_API_KEY}&units=imperial`
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.WEATHER_API_KEY}&units=imperial`
     );
     const weatherData = await res.json();
 
@@ -14,9 +16,19 @@ export async function getStaticProps(){
     };
 }
 
+export const getStaticPaths = async () => {
+    return {
+        paths: [],
+        fallback: true,
+};
+};
+
 export default function Home({weatherData}) {
     console.log(weatherData);
+    if(!weatherData) return null;
      return (
+        <>
+        <Header/>
         <main>
             <h1>Weather App</h1>
             <WeatherCard 
@@ -29,5 +41,6 @@ export default function Home({weatherData}) {
             cloudiness={weatherData.clouds.all}
             windSpeed={weatherData.wind.speed} />
         </main>
+        </>
      )
 }
