@@ -3,12 +3,14 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: sans-serif;
 }
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  color:rgb(225, 243, 255);
 }
 
 a {
@@ -16,3 +18,25 @@ a {
   text-decoration: none;
 }
 
+header nav {
+  display: flex;
+  gap: 20px;
+  padding: 10px 20px;
+  justify-content: flex-end;
+  background-color: lightskyblue;
+  color: rgb(40, 61, 5);
+}
+
+header nav a {
+  font-weight: bold;
+}
+
+header nav :hover{
+  color: rgb(225, 243, 255);
+}
+
+h1{
+  text-align: center;
+  margin: 10px;
+  color: rgb(40, 61, 5);
+}
