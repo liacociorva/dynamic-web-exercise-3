@@ -24,7 +24,7 @@ header nav {
   padding: 10px 20px;
   justify-content: flex-end;
   background-color: lightskyblue;
-  color: rgb(40, 61, 5);
+  color: rgb(5, 17, 61);
 }
 
 header nav a {
@@ -38,5 +38,5 @@ header nav :hover{
 h1{
   text-align: center;
   margin: 10px;
-  color: rgb(40, 61, 5);
+  color: rgb(5, 17, 61);
 }

@@ -14,7 +14,7 @@ const WeatherCard = ({cityName, weatherType, currentTemp,
         <p>Current Temperature: {currentTemp}°</p>
         <p>High Temperature: {highTemp}°</p>
         <p>Low Temperature: {lowTemp}°</p>
-        <p style={{backgroundColor: `rgba(0,0,0,.${cloudiness}`}}>Cloudiness: {cloudiness}%</p>
+        <p style={{backgroundColor: `rgba(5, 17, 61,.${cloudiness}`}}>Cloudiness: {cloudiness}%</p>
         <p>Humidity: {humidity}%</p>
         <p>Wind Speed: {windSpeed} mph</p>
         </div>
